@@ -1,0 +1,32 @@
+div{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 4, 1fr;
+    grid-template-rows: 3, 1fr;
+    border: red solid 3px;
+    height: 100px;
+    
+}
+.date{
+    grid-column: 1;
+    grid-row: 2;
+
+    color: blue;
+
+}
+.entry{
+    grid-column: 1;
+    grid-row: 3;
+color: blue;
+}
+.confidence{
+grid-column: 2;
+grid-row: 2;
+color: blue;
+}
+#save{
+    color: blue;
+    grid-column: 2;
+    grid-row: 3;
+
+}
