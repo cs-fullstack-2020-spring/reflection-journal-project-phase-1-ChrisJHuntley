@@ -8,7 +8,7 @@ console.log(confidence)
 let save = document.querySelector('#save')
 console.log(save)
 
-
+// !! looks like you should be calling this function in your event handler
 submitForm = (event) => {
     event.preventDefault(); 
     let userInput = {
@@ -22,12 +22,13 @@ submitForm = (event) => {
 }
 // created object literal notation
 
+//!! this should happen inside of your callback function
 let input = {
     creation_date: date.value,
     journal_entry: entry.value,
     confidence_level: confidence.value
 }
- 
+ // !! why is this array populated with random data not submitted by the user?? (don't just copy the examples from the README)
 // Created array to store object literal notation
 const journalArray = [
     {
