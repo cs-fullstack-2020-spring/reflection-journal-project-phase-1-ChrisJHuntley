@@ -1,32 +1,36 @@
-div{
-    text-align: center;
-    display: grid;
-    grid-template-columns: 4, 1fr;
-    grid-template-rows: 3, 1fr;
-    border: red solid 3px;
-    height: 100px;
+ 
+body{
+     background-color:gray;
+    padding: 1%;
+    margin: 1%;
     
 }
-.date{
-    grid-column: 1;
-    grid-row: 2;
 
-    color: blue;
+h1{
+    color: red;
+    
+}
 
+input, label{
+    color:black;
+    display: block;
+    margin: 1%;
 }
-.entry{
+.mygrid{
+    color: red;
     grid-column: 1;
-    grid-row: 3;
-color: blue;
+    grid-row: 1;
 }
-.confidence{
-grid-column: 2;
-grid-row: 2;
-color: blue;
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
-#save{
-    color: blue;
+
+ 
+.gridPastEntries{
+    color: red;
     grid-column: 2;
-    grid-row: 3;
-
+    grid-row: 2;
 }

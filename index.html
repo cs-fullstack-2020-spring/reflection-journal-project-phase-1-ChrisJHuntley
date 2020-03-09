@@ -1,46 +1,43 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
-     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Project 1</title>
+   <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <h1>Reflections project</h1>
-    <form action="">
-    <fieldset>
-    <div class="date">
-        <label for="date">Creation Date:</label>
-        <input type="date">
-    </div>
-    
-    <div class="entry">
-        <label for="text">Journal Entry:</label>
-        <input type="textarea">
-    
-    </div>
-    
-    <div class="confidence">
-        <label for="confidence">Rate your Confidence</label>
-        <select name="Confidence Level" id="level"> 
-        <option value="">Select Value here </option>
-        <option value="high">High</option>
-        <option value="medium">medium</option>
-        <option value="low">low</option>
-    </select>
+    <h1>phase 1</h1>
+    <div class="container">
+        <div class="mygrid">
+            <h1>Create Entry</h1>
+            <form action="">
+                <label for="dateField"> Date of submitted form</label>
+                <input type="date" id="date">
 
-    </div>
-    <div>
-        <button id="save">Save Reflection</button>
-    </div>
-    </fieldset>
-    </form>
+                <label for="entryField"> Enter text here</label>
+                <textarea id="entry" cols="100" rows="30"></textarea>
 
-    <script src="index.js"></script>
+                <label for="confidenceField">Rate Your Confidence</label>
+                <select id="confidence">
+                    <option value=" ">--</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+
+                <input type="submit" id="submit">
+            </form>
+        </div>
+
+        <div class="gridPastEntries">
+            <h3>Old Entries</h3>
+            <div id="entryBlock"></div>
+        </div>
+    </div>
+     <script src="index.js"></script>
 </body>
 
 </html>
