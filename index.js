@@ -4,13 +4,13 @@ let confidence = document.querySelector("#confidence");
 let entry = document.querySelector("#entry");
 // console.log(entry)
 let date = document.querySelector("#date");
-// console.log(date);
+// console.log(date)
 let submit = document.querySelector("#submit");
 // console.log(submit)
-let entryBlock = document.querySelector("#entryBlock")
+let entryBlock = document.querySelector("#entryBlock");;
  
 // define  array  
-let entryArray = [];
+let journalArray = []
 
 // create a function for event
 let formSubmission = (event) => {
@@ -20,24 +20,29 @@ let formSubmission = (event) => {
 
     //  make object literal notation  
  let newEntry = {
+    date : date.value,
         confidence : confidence.value,
         entry : entry.value,
         date : date.value
     }
     // console.log(newEntry)  
     // push object to array
-    entryArray.push(newEntry);
+    journalArray.push(newEntry);
     // call your function  
-    displayEntries(entryArray);   
+    displayEntries(journalArray);   
 }
 
 // show entries to array
-let displayEntries = (entryArray) => {
+let displayEntries = (journalArray) => {
   
     // define variable to add to later
     let entryBlockString = "";  
-    entryArray.forEach(entry => {
-        entryBlockString = `${entryBlockString} ${entry.entry} \n ${entry.confidence} \n ${entry.date}\n`
+    journalArray.forEach(entry => {
+        entryBlockString = `
+        ${entryBlockString} 
+        ${entry.entry}
+         ${entry.confidence} 
+         ${entry.date}`
         // console.log(entryBlockString)
     
     });
