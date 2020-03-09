@@ -1,44 +1,49 @@
  
 let confidence = document.querySelector("#confidence");
-// console.log(confidence);
+// console.log(confidence)
 let entry = document.querySelector("#entry");
-// console.log(entry);
+// console.log(entry)
 let date = document.querySelector("#date");
 // console.log(date);
 let submit = document.querySelector("#submit");
-// console.log(submit);
+// console.log(submit)
 let entryBlock = document.querySelector("#entryBlock")
  
-// define and empty array to keep journal entries
+// define  array  
 let entryArray = [];
 
-// create a callback function for on click event
+// create a function for event
 let formSubmission = (event) => {
-    event.preventDefault(); // keep form from reloading
-    // console.log("callback works"); // check that call back is being called
+    event.preventDefault(); 
+    // keep form from reloading
+    
 
-    // define and object using object literal notation with form input values as property values
-    let newEntry = {
+    //  make object literal notation  
+ let newEntry = {
         confidence : confidence.value,
         entry : entry.value,
         date : date.value
     }
-    // console.log(newEntry) // check that object is being created
-    entryArray.push(newEntry); // push object to array defined on line 16
-    displayEntries(entryArray); // call function to display entries and pass array
+    // console.log(newEntry)  
+    // push object to array
+    entryArray.push(newEntry);
+    // call your function  
+    displayEntries(entryArray);   
 }
 
-// arrow function to display entries from array
+// show entries to array
 let displayEntries = (entryArray) => {
-    // console.log("array function called"); // check that function is being called
-    let entryBlockString = ""; // define an empty string to build string to display
+  
+    // define variable to add to later
+    let entryBlockString = "";  
     entryArray.forEach(entry => {
         entryBlockString = `${entryBlockString} ${entry.entry} \n ${entry.confidence} \n ${entry.date}\n`
-        // console.log(entryBlockString);
-        // iterate through array and for each element in the array append the new element to the string defined on line 37
+        // console.log(entryBlockString)
+    
     });
-    entryBlock.innerText = `${entryBlockString}`; // display built string as innerText in empty div
+// display entries in browser
+    entryBlock.innerText = `${entryBlockString}`; 
 }
 
-// call callback function when form submit button is clicked
+// call the function for clicked button
 submit.addEventListener("click", formSubmission);
