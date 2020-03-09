@@ -1,4 +1,5 @@
 # Reflections Journal Project - Phase 1 (HTML/CSS/JavaScript)
+#### Looks like your grid isn't rendering? It's a little hard to read your JS file bc you've got a lot of unused code. Be sure to clean up/comment your files in the last five/ten minutes of a big project like this. Looks like you were making progress in regards to some of the questions you were trying to ask me yesterday. Check out my comments in your JS file and be sure to check out m crack at the solution in the gist I sent in the slack.
 > Please jump to the bottom of this README file for general information and project guidelines
 
 ## Phase 1: Design and Layout, JavaScript Reflection Objects
