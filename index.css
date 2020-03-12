@@ -1,41 +1,42 @@
  
 body{
-     background-color:gray;
-    padding: 1%;
-    margin: 1%;
+     background-color:white;
+    padding: 3%;
+    margin: 3%;
     
 }
-
-h1{
-    color: red;
-    
-}
-
-input{
-    color:black;
-    display: block;
-    margin: 1%;
-}
-label{
-    color:black;
-    display: block;
-    margin: 1%;
-}
-.mygrid{
-    color: red;
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.container{
+#container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
 
+h1{
+    color:orangered;
+    
+}
+
+input{
+    color:black;
+    
+}
+label{
+    color:black;
+    
+}
+.mygrid{
+    color: orangered;
+    grid-column: 1;
+    grid-row: 1;
+}
+
  
-.gridPastEntries{
-    color: red;
+
+ 
+.oldEntries{
+    color: blue;
+    border: blue 2px solid;
     grid-column: 2;
     grid-row: 2;
-}
+    margin-bottom: 300px;
+} 

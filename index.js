@@ -23,17 +23,16 @@ let formSubmission = (event) => {
     date : date.value,
         confidence : confidence.value,
         entry : entry.value,
-        date : date.value
-    }
+ }
     // console.log(newEntry)  
     // push object to array
     journalArray.push(newEntry);
     // call your function  
-    displayEntries(journalArray);   
+    showEntries(journalArray);   
 }
 
 // show entries to array
-let displayEntries = (journalArray) => {
+let showEntries = (journalArray) => {
   
     // define variable to add to later
     let entryBlockString = "";  
@@ -42,7 +41,7 @@ let displayEntries = (journalArray) => {
         ${entryBlockString} 
         ${entry.entry}
          ${entry.confidence} 
-         ${entry.date}`
+         ${entry.date}\n`
         // console.log(entryBlockString)
     
     });
